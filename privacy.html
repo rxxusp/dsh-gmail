@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSH Gmail — Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         max-width: 40rem; margin: 4rem auto; padding: 0 1.25rem; color: #1a1a1a; }
+  h1 { font-size: 1.75rem; margin-bottom: .25rem; }
+  p.sub { color: #666; margin-top: 0; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  code { background: #f3f3f3; padding: .15em .35em; border-radius: 4px; font-size: .9em; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e5e5e5; color: #666; font-size: .9rem; }
+</style>
+</head>
+<body>
+  <h1>Privacy Policy — DSH Gmail</h1>
+  <p class="sub">Last updated: 24 October 2026</p>
+
+  <p>DSH Gmail is a single-user, self-hosted integration between a Google Account and a locally-run
+  AI assistant. This policy describes what it does with Google user data. <a href="./">Back to app page</a>.</p>
+
+  <h2>1. What data is accessed</h2>
+  <p>When the owner authorizes the app, Google issues OAuth credentials for the requested scopes:</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/gmail.modify</code> — read messages, threads and labels,
+      create and send messages, apply labels, move mail to trash.</li>
+    <li><code>https://www.googleapis.com/auth/gmail.settings.basic</code> — read and create Gmail
+      filters and labels.</li>
+  </ul>
+  <p>This means the app can access the content of the mailbox of the account that granted consent.
+  No other Google Account's data is ever accessible to it.</p>
+
+  <h2>2. Where data is stored</h2>
+  <p>OAuth tokens (access token, refresh token, granted scopes) are written to
+  <code>~/.gmail-mcp/credentials.json</code> on the owner's own computer, readable only by the owner's
+  user account. Mail content is processed in memory on that same computer to answer the owner's
+  requests and is not copied to any database.</p>
+
+  <h2>3. No sharing, no sale, no ads</h2>
+  <p>Google user data is never transmitted to, stored on, or shared with any third-party server, and
+  is never sold or used for advertising or profiling. There are no analytics, no telemetry, and no
+  remote backend of any kind.</p>
+
+  <h2>4. Limited Use</h2>
+  <p>DSH Gmail's use and transfer of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User
+  Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>5. Retention and deletion</h2>
+  <p>Tokens are kept only until the owner revokes access or deletes the local credential file. Deleting
+  <code>~/.gmail-mcp/credentials.json</code> removes all stored credentials from the machine.</p>
+
+  <h2>6. Revoking access</h2>
+  <p>Access can be revoked at any time at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> by removing
+  DSH Gmail from the list of third-party apps. Revocation invalidates the tokens immediately; the app
+  then has no access to any Gmail data.</p>
+
+  <h2>7. Contact</h2>
+  <p>Questions about this policy: <a href="mailto:graham.richards.a.a@gmail.com">graham.richards.a.a@gmail.com</a></p>
+
+  <footer>
+    DSH Gmail is a personal project, not a commercial service.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSH Gmail</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         max-width: 40rem; margin: 4rem auto; padding: 0 1.25rem; color: #1a1a1a; }
+  h1 { font-size: 1.75rem; margin-bottom: .25rem; }
+  p.sub { color: #666; margin-top: 0; }
+  code { background: #f3f3f3; padding: .15em .35em; border-radius: 4px; font-size: .9em; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e5e5e5; color: #666; font-size: .9rem; }
+</style>
+</head>
+<body>
+  <h1>DSH Gmail</h1>
+  <p class="sub">A private, single-user bridge between Gmail and a local AI agent.</p>
+
+  <p>DSH Gmail is a personal integration: a small MCP (Model Context Protocol) server running on
+  the owner's own computer that connects to the Gmail API so a locally-run AI assistant can read,
+  search, draft, send, label, and filter mail on the owner's behalf.</p>
+
+  <h2>Who uses it</h2>
+  <p>Exactly one person — the owner of the Google Account that authorizes it. It is not distributed,
+  not offered as a service, and has no other users. OAuth tokens are stored locally in
+  <code>~/.gmail-mcp/</code> on the owner's machine.</p>
+
+  <h2>How it uses Google data</h2>
+  <p>It requests the <code>gmail.modify</code> and <code>gmail.settings.basic</code> scopes, which let
+  it act on mail only for the account that granted consent. Nothing is sent to any third-party
+  server: the assistant runs locally, and requests go straight from the owner's computer to
+  Google's APIs.</p>
+
+  <p>Full details are in the <a href="./privacy.html">privacy policy</a>.</p>
+
+  <footer>
+    Contact: <a href="mailto:graham.richards.a.a@gmail.com">graham.richards.a.a@gmail.com</a>
+  </footer>
+</body>
+</html>
